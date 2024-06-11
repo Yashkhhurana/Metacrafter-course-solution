@@ -1,1 +1,35 @@
 
+function mintNFT (name, length, size) {
+    const Nft = {
+        "MovieName" : name,
+        "Length": length,
+        "FileSize": size
+    }
+
+    Nft_Store.push(Nft);
+}
+
+function listNFTs () {
+    console.log("The Details of NFTs are below: ");
+    for(let i=0;i<NFTStore.length;i++){
+        console.log("Video Name: " + Nft_Store[i].MovieName);
+        console.log("Video Length: "+Nft_Store[i].Length);
+        console.log("File Size: "+ Nft_Store[i].FileSize);
+        console.log("\n");
+    }
+}
+
+
+function getTotalSupply() {
+    console.log("The number of NFTs minted are: "+Nft_Store.length);
+}
+
+// call functions 
+mintNFT("Yash", "70min", "250mb");
+mintNFT("Krishna", "35min", "270mb");
+mintNFT("Radhe", "50min", "350mb")
+
+listNFTs();
+getTotalSupply();
+
+
